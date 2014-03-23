@@ -1,0 +1,14 @@
+@import "compass";
+
+#mainContainer {
+  margin: auto;
+  width: 800px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+body {
+  @include background-image(linear-gradient(top, #ccc, #ddd));
+}

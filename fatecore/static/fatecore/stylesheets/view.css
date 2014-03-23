@@ -1,0 +1,70 @@
+/* line 3, ../sass/view.scss */
+h2, h3, h4, h5, h6 {
+  border-bottom: 1px solid black;
+  padding-bottom: 3px;
+  margin: 4px 0 4px 0;
+}
+
+/* line 10, ../sass/view.scss */
+.skill-table td {
+  width: 90px;
+}
+
+/* line 15, ../sass/view.scss */
+.dice-block {
+  width: 12px;
+  height: 12px;
+  margin-right: 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background-color: black;
+  display: inline-block;
+}
+
+/* line 25, ../sass/view.scss */
+.stress .physical, .stress .mental {
+  float: left;
+  width: 300px;
+  margin-right: 20px;
+}
+
+/* line 32, ../sass/view.scss */
+.clear {
+  clear: both;
+}
+
+/* line 36, ../sass/view.scss */
+.stress-box {
+  border: 1px solid black;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 45, ../sass/view.scss */
+.refresh {
+  float: right;
+  font-size: 24px;
+  margin-top: -50px;
+}
+/* line 50, ../sass/view.scss */
+.refresh span {
+  padding: 5px;
+  padding-left: 20px;
+  width: 30px;
+  border: 1px solid black;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  display: inline-block;
+}

@@ -1,0 +1,22 @@
+<form id="char" method="POST" action="/new">
+<h3>
+  Character Basics
+</h3>
+<div class="form">
+  {{form.as_p}}
+</div>
+<h3>Aspects</h3>
+<div class="aspect_form">
+  {{aspect_form.as_p}}
+</div>
+<h3>Skills</h3>
+<div class="aspect_form">
+  {{skill_form.as_p}}
+</div>
+<h3>Stunts</h3>
+<div class="aspect_form">
+  {{stunt_form.as_p}}
+</div>
+{% csrf_token %}
+<button type="submit">Submit</button>
+</form>

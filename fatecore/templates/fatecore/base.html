@@ -1,0 +1,15 @@
+{% load staticfiles %}
+
+<html>
+<head>
+  <title>{% block title %}Default Title{% endblock %}</title>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'fatecore/stylesheets/base.css' %}" />
+  {% block stylesheets %}{% endblock %}
+</head>
+<body>
+  <div id="mainContainer">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

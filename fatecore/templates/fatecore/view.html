@@ -1,0 +1,79 @@
+{% extends 'fatecore/base.html' %}
+{% load staticfiles %}
+{% load fatecore_extras %}
+
+{% block title %}View Character{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'fatecore/stylesheets/view.css' %}" />
+{% endblock %}
+
+{% block content %}
+<h1>
+  {{character.name}}
+</h1>
+
+<div class="refresh"><span>{{character.refresh}}</span></div>
+
+<div class="aspects">
+  <h3>Aspects</h3>
+  {% for aspect in character.fateaspect_set.all %}
+    <div class="aspect">
+      {{forloop.counter}}. {{aspect.description}}
+    </div>
+  {% endfor %}
+</div>
+
+<div class="skills">
+  <h3>Skills</h3>
+  <table class="skill-table">
+  {% for skill in character.fateskill_set.all|dictsortreversed:"level" %}
+    <tr class="skill">
+      <td>
+        {{skill.name}}
+      </td>
+      <td>
+        {% for lv in skill.level|times %}
+        <span class="dice-block"></span>
+        {% endfor %}
+      </td>
+    </tr>
+  {% endfor %}
+  </table>
+</div>
+
+<div class="stress">
+  <h3>Stress Tracks</h3>
+  <div class="physical">
+    <h4>Physical Stress</h4>
+    <div class="physical-boxes">
+      {% for i in character.physical_stress_boxes|times %}
+        <span class="stress-box"></span>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="mental">
+    <h4>Mental Stress</h4>
+    <div class="mental-boxes">
+      {% for i in character.mental_stress_boxes|times %}
+        <span class="stress-box"></span>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<div class="stunts">
+  <h3>Stunts</h3>
+
+  {% for stunt in character.fatestunt_set.all %}
+    <div class="stunt">
+      <div class="stunt-name">
+        {{stunt.name}}
+      </div>
+      <div class="stunt-description">
+        {{stunt.description}}
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}

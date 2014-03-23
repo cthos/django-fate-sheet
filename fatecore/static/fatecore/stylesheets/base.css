@@ -1,0 +1,18 @@
+/* line 3, ../sass/base.scss */
+#mainContainer {
+  margin: auto;
+  width: 800px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+/* line 12, ../sass/base.scss */
+body {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #dddddd));
+  background-image: -webkit-linear-gradient(top, #cccccc, #dddddd);
+  background-image: -moz-linear-gradient(top, #cccccc, #dddddd);
+  background-image: -o-linear-gradient(top, #cccccc, #dddddd);
+  background-image: linear-gradient(top, #cccccc, #dddddd);
+}

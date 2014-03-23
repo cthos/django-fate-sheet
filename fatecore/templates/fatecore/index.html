@@ -1,0 +1,16 @@
+{% extends 'fatecore/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<h1>Character List</h1>
+
+{% if characters_list %}
+<ul>
+  {% for char in characters_list %}
+    <li><a href="/characters/{{char.id}}">{{char.name}}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+  THERE IS NOTHING TO SEE HERE.
+{% endif %}
+{% endblock %}
