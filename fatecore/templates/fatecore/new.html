@@ -3,6 +3,10 @@
 
 {% block title %}Create new character{% endblock %}
 
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'fatecore/stylesheets/new.css' %}" />
+{% endblock %}
+
 {%block content %}
 <form id="char" method="POST" action="/new">
 <h3>
@@ -16,11 +20,15 @@
   {{aspect_form.as_p}}
 </div>
 <h3>Skills</h3>
-<div class="aspect_form">
-  {{skill_form.as_p}}
+<div class="skill_form">
+  {% for sk in skill_form %}
+  <div class="skill-instance">
+    {{sk.as_p}}
+  </div>
+  {% endfor %}
 </div>
 <h3>Stunts</h3>
-<div class="aspect_form">
+<div class="stunt_form">
   {{stunt_form.as_p}}
 </div>
 {% csrf_token %}
