@@ -8,6 +8,10 @@
 <link rel="stylesheet" type="text/css" href="{% static 'fatecore/stylesheets/view.css' %}" />
 {% endblock %}
 
+{% block scripts %}
+<script type="text/javascript" src="{% static 'fatecore/js/stress.js' %}"></script>
+{% endblock %}
+
 {% block content %}
 <h1>
   {{character.name}}
@@ -61,6 +65,9 @@
     </div>
   </div>
   <div class="clear"></div>
+  <div class="reset-stress-button">
+    <a href="javascript:void(0);">Reset Stress</a>
+  </div>
 </div>
 
 <div class="stunts">

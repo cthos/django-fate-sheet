@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load fatecore_extras %}
 
 <html>
 <head>
@@ -6,6 +7,8 @@
 
   <link rel="stylesheet" type="text/css" href="{% static 'fatecore/stylesheets/base.css' %}" />
   {% block stylesheets %}{% endblock %}
+  <script type="text/javascript" src="{% static 'fatecore/js/jquery-1.11.0.min.js' %}"></script>
+  {% block scripts %}{% endblock %}
 </head>
 <body>
   <div id="mainContainer">

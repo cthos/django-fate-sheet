@@ -1,3 +1,9 @@
+{% extends 'fatecore/base.html' %}
+{% load staticfiles %}
+
+{% block title %}Create new character{% endblock %}
+
+{%block content %}
 <form id="char" method="POST" action="/new">
 <h3>
   Character Basics
@@ -20,3 +26,4 @@
 {% csrf_token %}
 <button type="submit">Submit</button>
 </form>
+{% endblock %}

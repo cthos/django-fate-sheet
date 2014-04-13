@@ -25,7 +25,7 @@ def index(request):
   return HttpResponse(template.render(context))
 
 def new(request):
-  charform = FateCharacterForm(request.POST)
+  charform = FateCharacterForm(request.POST or None)
   aspect_formset = inlineformset_factory(FateCharacter, FateAspect, can_delete = False, extra = 5)
   stunt_formset = inlineformset_factory(FateCharacter, FateStunt, can_delete = False, extra = 2)
   skill_formset = inlineformset_factory(FateCharacter, FateSkill, can_delete = False, extra = 5)
