@@ -52,7 +52,7 @@
     <h4>Physical Stress</h4>
     <div class="physical-boxes">
       {% for i in character.physical_stress_boxes|times %}
-        <span class="stress-box"></span>
+        <span class="stress-box small-box checkable"></span>
       {% endfor %}
     </div>
   </div>
@@ -60,7 +60,7 @@
     <h4>Mental Stress</h4>
     <div class="mental-boxes">
       {% for i in character.mental_stress_boxes|times %}
-        <span class="stress-box"></span>
+        <span class="stress-box small-box checkable"></span>
       {% endfor %}
     </div>
   </div>
@@ -68,6 +68,16 @@
   <div class="reset-stress-button">
     <a href="javascript:void(0);">Reset Stress</a>
   </div>
+</div>
+
+<div class="consequences">
+  <h3>Consequences</h3>
+  <div class="minor">Minor (-2) <span class="small-box checkable" data-target="minor-description"></span></div>
+  <div class="minor-description hidden"><input type="text" id="minorDesc" size="60"></div>
+  <div class="major">Major (-4) <span class="small-box checkable" data-target="major-description"></span></div>
+  <div class="major-description hidden"><input type="text" id="majorDesc" size="60"></div>
+  <div class="severe">Severe (-6) <span class="small-box checkable" data-target="severe-description"></span></div>
+  <div class="severe-description hidden"><input type="text" id="severeDescription" size="60"></div>
 </div>
 
 <div class="stunts">

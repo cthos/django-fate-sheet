@@ -27,17 +27,21 @@
     width: 300px;
     margin-right: 20px;
   }
+}
 
-  .checked {
-    background-color: red;
-  }
+.checked {
+  background-color: red;
 }
 
 .clear {
   clear: both;
 }
 
-.stress-box {
+.hidden {
+  display:none;
+}
+
+.small-box {
   border: 1px solid black;
   width: 16px;
   height: 16px;

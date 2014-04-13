@@ -30,8 +30,9 @@ h2, h3, h4, h5, h6 {
   width: 300px;
   margin-right: 20px;
 }
-/* line 31, ../sass/view.scss */
-.stress .checked {
+
+/* line 32, ../sass/view.scss */
+.checked {
   background-color: red;
 }
 
@@ -41,7 +42,12 @@ h2, h3, h4, h5, h6 {
 }
 
 /* line 40, ../sass/view.scss */
-.stress-box {
+.hidden {
+  display: none;
+}
+
+/* line 44, ../sass/view.scss */
+.small-box {
   border: 1px solid black;
   width: 16px;
   height: 16px;
@@ -53,13 +59,13 @@ h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 
-/* line 49, ../sass/view.scss */
+/* line 53, ../sass/view.scss */
 .refresh {
   float: right;
   font-size: 24px;
   margin-top: -50px;
 }
-/* line 54, ../sass/view.scss */
+/* line 58, ../sass/view.scss */
 .refresh span {
   padding: 5px;
   padding-left: 20px;
@@ -73,17 +79,17 @@ h2, h3, h4, h5, h6 {
   display: inline-block;
 }
 
-/* line 64, ../sass/view.scss */
+/* line 68, ../sass/view.scss */
 .stunt {
   margin-bottom: 5px;
 }
 
-/* line 68, ../sass/view.scss */
+/* line 72, ../sass/view.scss */
 .stunt-name {
   font-weight: bold;
 }
 
-/* line 72, ../sass/view.scss */
+/* line 76, ../sass/view.scss */
 .stunt-description {
   margin-left: 5px;
   font-style: italic;
