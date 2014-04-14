@@ -1,5 +1,5 @@
 """
-Django settings for mydjango project.
+Django settings for fatedjango project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '_va^5o7mvxv*bc=03o1h^^q(_hdgtrt2h4%0)0okch4)eh8=md'
+SECRET_KEY = os.environ['FATEDJANGO_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -48,9 +48,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'mydjango.urls'
+ROOT_URLCONF = 'fatedjango.urls'
 
-WSGI_APPLICATION = 'mydjango.wsgi.application'
+WSGI_APPLICATION = 'fatedjango.wsgi.application'
 
 
 # Database
